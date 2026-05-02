@@ -1,0 +1,29 @@
+name: usage of needs
+
+on:
+  workflow_dispatch:
+
+steps:
+  job1:
+    runs-on: ubuntu-latest
+    steps:
+      -run: echo "Hello"
+
+  job2:
+    runs-on: ubuntu-latest
+    steps:
+      -run: "very much"
+    needs:
+      - job3
+
+  job3:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Thankyou"
+    needs:
+      - job4
+
+  job4:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "World"
