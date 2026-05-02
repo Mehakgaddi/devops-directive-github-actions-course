@@ -3,7 +3,7 @@ name: usage of needs
 on:
   workflow_dispatch:
 
-steps:
+jobs:
   job1:
     runs-on: ubuntu-latest
     steps:
