@@ -1,8 +1,10 @@
 name: Automatic Workflow
 
 on: 
-  push:
+  push:  # can trigger when push
     branches: [main]
+  workflow_dispatch:   # can be triggered manually from the Actions tab in GitHub
+    
 
 jobs: 
   automatic-workflow-job:
