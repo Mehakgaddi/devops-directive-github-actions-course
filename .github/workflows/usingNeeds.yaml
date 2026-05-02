@@ -7,12 +7,12 @@ jobs:
   job1:
     runs-on: ubuntu-latest
     steps:
-      -run: echo "Hello"
+      - run: echo "Hello"
 
   job2:
     runs-on: ubuntu-latest
     steps:
-      -run: "very much"
+      - run: "very much"
     needs:
       - job3
 
