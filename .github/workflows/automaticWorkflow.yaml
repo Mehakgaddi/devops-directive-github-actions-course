@@ -1,0 +1,11 @@
+name: Automatic Workflow
+
+on: 
+  push:
+    branches: [main]
+
+jobs: 
+  automatic-workflow-job:
+    runs-on: ubuntu-24.04
+    steps: 
+      - run: echo "This workflow runs automatically when you push to the main branch."
