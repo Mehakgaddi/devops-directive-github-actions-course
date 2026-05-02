@@ -1,0 +1,23 @@
+name: Mutliple Types of Jobs
+
+on: workflow_dispatch
+
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "This job uses inline shell"
+
+  job2:
+    runs-on: ubuntu-latest
+    steps:
+      - run: print("Hello World")
+        shell: python
+
+  
+  job3:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: gr2m/hello-world-js-action@v1.x
+        with:
+          greeting: 'Mehak'
