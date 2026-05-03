@@ -1,0 +1,18 @@
+name : include paths
+
+on:
+  push:
+    branches:
+      - main
+
+    paths: 
+      - 'Paths/**'    # run workfolow for all files in Paths folder excluding ExcludeFile.yaml
+      - '!Paths/exclude'
+
+  workflow_dispatch:
+
+jobs: 
+  job1:
+    runs-on: ubuntu-latest
+    steps: 
+      - run: echo "Hello World"
