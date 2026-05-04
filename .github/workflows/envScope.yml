@@ -20,5 +20,6 @@ jobs:
     - name: this is step 2
       run: |
             echo "$workflow_var"
-            echo "$jov_var"
+            echo "$jov_var"    
             echo "{$step_var:-<UNSET>}"
+#jov_var prints empty line as this variable not exists 
