@@ -1,0 +1,24 @@
+name: Environment Variables Scope
+
+on: workflow_dispatch
+env: 
+  workflow_var: I_AM_WORKFLOW_ENV
+
+jobs: 
+  job1:
+   runs-on: ubuntu-latest
+   env: 
+      job_var: I_AM_JOB_ENV
+   steps: 
+    - name: this is step 1
+      env: 
+         step_var: I_AM STEP_ENV
+      run: |
+          echo "$workflow_var"
+          echo "$job_var"
+          echo "$step_var"
+    - name: this is step 2
+      run: |
+            echo "$workflow_var"
+            echo "$jov_var"
+            echo "{$step_var:-<UNSET>}"
