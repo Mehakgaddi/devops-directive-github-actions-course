@@ -14,8 +14,10 @@ jobs:
       - name: generate output
         id: generate
         run: |
-          echo "name=Mehak" >> $GITHUB_OUTPUT
-          echo "lastName=Gaddi" >> $GITHUB_ENV
+          name: Mehak
+          lastName: Gaddi
+          echo ${name} >> $GITHUB_OUTPUT
+          echo "${lastName}" >> $GITHUB_ENV
 
   consumer:
     runs-on: ubuntu-latest
