@@ -4,10 +4,11 @@ on: workflow_dispatch
 
 jobs:
   producer:
-    runs-on: ubutnu-latest
+    runs-on: ubuntu-latest
     
     outputs: 
       username: ${{steps.generate.outputs.name}}
+      lastName: ${{steps.generate.outputs.lastName}}
     
     steps: 
       - name: generate output
