@@ -25,5 +25,5 @@ jobs:
     steps: 
       - name: Print output
         run: |
-          echo "${needs.producer.outputs.username}"
-          echo "${needs.producer.outputs.lastName}"
+          echo "${{needs.producer.outputs.username}}"
+          echo "${{needs.producer.outputs.lastName}}"
