@@ -1,0 +1,27 @@
+name: Different Runner Types Demo
+
+on: workflow_dispatch
+
+jobs:
+  github-hosted-runner:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+            echo "This job runs on a GitHub-hosted runner."
+            echo "Runner name: ${{runner.os}}"
+
+  self-hosted-runner:
+    runs-on: self-hosted
+    steps: 
+      - run: |
+            echo "This job runs on self-hosted runner"
+            echo "Runner name: ${{runner.os}}"
+
+  third-party-runner:
+    runs-on: namespace-profile-learning
+    steps:
+      - run: |
+            echo "This job runs on a third-party runner."
+            echo "Runner name: ${{runner.os}}"  
+
+  
